@@ -1,14 +1,5 @@
 
 //========================================================================================
-// Filename     : groupchat_linux_server.c
-// Description  : Group chat application - Server
-// Author       : Kyungjae Lee
-// History      : 10/20/2022 - Created file
-//                10/26/2022 - Added descriptions to the compilation command flags
-//                10/27/2022 - Updated code comments
-//                11/11/2022 - Modified function name 'print_err' -> 'handle_err'
-//                11/18/2022 - Added screen clear feature 'system("clear")'
-//----------------------------------------------------------------------------------------
 // To compile this program:
 //      gcc groupchat_linux_server.c -D_REENTRANT -o server -lpthread
 //                                   ------------           ---------
@@ -21,8 +12,6 @@
 // To run this program:
 //      ./server <port>
 //
-// [!] Note: For this program to work properly with clients in the different network, TCP
-//           port must be configured using port-forwarding.
 //========================================================================================
 
 #include <stdio.h>
