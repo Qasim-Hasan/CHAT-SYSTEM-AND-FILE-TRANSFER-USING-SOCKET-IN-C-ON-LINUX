@@ -1,4 +1,4 @@
-
+//RUN SERVER.C TUTORIAL:
 //========================================================================================
 // To compile this program:
 //      gcc groupchat_linux_server.c -D_REENTRANT -o server -lpthread
@@ -11,17 +11,16 @@
 //
 // To run this program:
 //      ./server <port>
-//
 //========================================================================================
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <pthread.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<string.h>
+#include<arpa/inet.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include<pthread.h>
 
 #define MSG_LEN     2048
 #define MAX_CLIENT  512
@@ -37,8 +36,8 @@ int cl_socks[MAX_CLIENT];   // array (list) of the connected clients
 pthread_mutex_t mutex;  
 
 
-int main(int argc, char *argv[])
-{
+
+int main(int argc, char *argv[]){
     int sv_sock, cl_sock;                   // server/client socket file descriptors
     struct sockaddr_in sv_addr, cl_addr;    // Internet socket address structures
     int cl_addr_sz;                         // size of the client sockaddr_in structure
@@ -70,13 +69,10 @@ int main(int argc, char *argv[])
     // convert the server socket to listening socket
     if (listen(sv_sock, 5) == -1)
         handle_err("ERROR: listen() fail");
-
     // clear the screen
     system("clear");
-
     // print the welcome message to the screen
     printf("Group chat linux server running ... (port: %s)\n", argv[1]);
-
     while (1)
     {
         // get the size of Internet socket address structure
@@ -100,9 +96,7 @@ int main(int argc, char *argv[])
         // print the connected client's IP address to the screen
         printf("Connected client IP: %s\n", inet_ntoa(cl_addr.sin_addr));
     }
-
-    close(sv_sock);
-   
+    close(sv_sock);  
     return 0;
 } // end of main
 
@@ -164,3 +158,5 @@ void handle_err(char *err_msg)
     fputc('\n', stderr);
     exit(1);
 } // end of handle
+
+

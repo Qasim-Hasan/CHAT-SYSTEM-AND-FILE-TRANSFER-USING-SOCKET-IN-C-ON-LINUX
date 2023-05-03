@@ -1,6 +1,11 @@
-//                                        OS PROJECT
-//                                  GROUP CHAT APPLICATION SERVER
-
+//RUN SERVER.C TUTORIAL:
+//========================================================================================
+// To compile this program:
+//      gcc server.c -o server 
+//
+// To run this program:
+//      ./client <port>
+//========================================================================================
 
 #include<stdio.h>
 #include<stdlib.h>

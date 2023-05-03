@@ -1,3 +1,12 @@
+//RUN CLIENT.C TUTORIAL:
+//========================================================================================
+// To compile this program:
+//      gcc client.c -o client 
+//
+// To run this program:
+//      ./client <ip> <port>
+//========================================================================================
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
